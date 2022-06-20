@@ -5,12 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "build": "pkg .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "pkg ."
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Ismael Bautista",
+  "license": "MIT",
   "bin": "./index.js",
   "dependencies": {
     "chalk": "^4.1.2",
