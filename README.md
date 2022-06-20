@@ -21,7 +21,7 @@ m:DnUTZuO
 - Clone this repo
 
 ```bash
-> git clone <this_repo> passwordgen
+> git clone https://github.com/ismaventuras/passwordgen.git passwordgen
 ```
 
 - install dependencies
