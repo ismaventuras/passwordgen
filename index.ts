@@ -18,9 +18,10 @@ program
     // .argument('<length>', 'password length', '8')
     .option('-l,--length <integer>', 'length for the password')
     .action((options) => {        
-        let length = isNaN(options.length) ? 8 : options.length; // check if user provided length, if not give the default value
-        let password = new Password({length}).generate();
-        log("Your password with "+ length +" characters is:" + "\n" + chalk.bgMagenta(password));
+        let length =  options.length;
+        let validcharacters = options.validcharacters
+        let password = new Password({length, validcharacters}).generate();
+        log("Your password with "+ password.length +" characters is:" + "\n" + chalk.bgMagenta(password));
     });
 
 program.parse()

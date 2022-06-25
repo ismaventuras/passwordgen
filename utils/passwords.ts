@@ -5,14 +5,14 @@ class Password {
     length: number;
     allcharacters: string;
 
-    constructor({length = 8, validcharacters = ALPHANUMERIC+SPECIAL}){
+    constructor({length = 16, validcharacters = ALPHANUMERIC+SPECIAL}){
         this.length = length;
         this.allcharacters = validcharacters
     }
 
     generate(){
         let password = '';                
-        for(let i=0;i<=this.length;i++){
+        for(let i=0;i<this.length;i++){
             password += this.allcharacters.charAt(Math.floor(Math.random() * this.allcharacters.length))
         }
         return password
