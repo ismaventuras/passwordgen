@@ -1,10 +1,12 @@
-const ALPHANUMERIC = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-const SPECIAL = "!@#/\{}[]<>*&%$+-=,.:"
+const ALPHANUMERIC: string = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+const SPECIAL: string = "!@#/\\{}[]<>*&%$+-=,.:";
 
 class Password {    
+    length: number;
+    allcharacters: string;
 
     constructor({length = 8, validcharacters = ALPHANUMERIC+SPECIAL}){
-        this.length = length
+        this.length = length;
         this.allcharacters = validcharacters
     }
 
@@ -18,4 +20,4 @@ class Password {
 
 }
 
-module.exports = {Password}
+export default Password

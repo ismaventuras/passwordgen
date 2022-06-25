@@ -1,24 +1,26 @@
 {
   "name": "passwordgen",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "build": "pkg ."
+    "start": "tsc && node ./dist/js/index.js",
+    "compile": "tsc",
+    "build": "tsc && pkg ."
   },
   "keywords": [],
   "author": "Ismael Bautista",
   "license": "MIT",
-  "bin": "./index.js",
+  "bin": "./dist/js/index.js",
   "dependencies": {
     "chalk": "^4.1.2",
     "commander": "^9.3.0"
   },
   "pkg": {
-    "outputPath": "dist",
+    "outputPath": "dist",    
     "targets": [
       "node16-win-x64"
-    ]
+    ],
+    "scripts": "./dist/js/**/*.js"
   }
 }

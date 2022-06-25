@@ -3,9 +3,9 @@
 //commander - to accept command arguments
 
 let log = console.log
-let chalk = require('chalk')
-let {program} = require('commander')
-let {Password} = require('./utils/passwords')
+import chalk from "chalk"
+import {program} from "commander"
+import Password from "./utils/passwords"
 
 // commander config
 program
